@@ -24,19 +24,19 @@
   }
 }
 
-@mixin container{
+@mixin container {
   width: 95%;
   max-width: 120rem;
   margin: 0 auto;
 }
 
-@mixin grid($colums,$gap : 5rem){
+@mixin grid($colums, $gap: 5rem) {
   display: grid;
   grid-template-columns: repeat($colums, 1fr);
   gap: $gap;
 }
 
-@mixin reset-list{
+@mixin reset-list {
   margin: 0;
   padding: 0;
   list-style: none;
