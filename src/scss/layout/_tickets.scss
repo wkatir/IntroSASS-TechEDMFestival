@@ -19,10 +19,10 @@
 }
 
 .pass {
-    transition: transform .3s ease-in-out;
-    &:hover{
-        transform: scale(1.1);
-    }
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 
   &-name {
     font-size: 3.6rem;
@@ -52,14 +52,14 @@
     }
   }
 
-  &-body{
+  &-body {
     background-color: v.$white;
-    ul{
-        @include m.reset-list;
-        li{
-            padding: 2rem;
-            border-bottom: 1px solid #e1e1e1;
-        }
+    ul {
+      @include m.reset-list;
+      li {
+        padding: 2rem;
+        border-bottom: 1px solid #e1e1e1;
+      }
     }
   }
 
