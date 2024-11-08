@@ -4,6 +4,7 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   scroll-padding-top: 0rem;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -17,10 +18,9 @@ body {
   color: v.$black;
   font-size: 2rem;
 
-  &.overflow-hidden{
+  &.overflow-hidden {
     overflow: hidden;
   }
-
 }
 p {
   color: v.$black;
