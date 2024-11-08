@@ -27,6 +27,44 @@ function createGallery() {
     const img = document.createElement("IMG");
     img.src = url;
     img.alt = "Img Gallery";
+
+    img.onclick = function () {
+      showImg(url);
+    };
+
     gallery.appendChild(img);
   });
+}
+
+function showImg(url) {
+  const img = document.createElement("IMG");
+  img.src = url;
+  img.alt = "Img Gallery";
+
+  const modal = document.createElement("DIV");
+  modal.classList.add("modal");
+  modal.onclick = closeModal;
+
+  const closeModalBtn = document.createElement('BUTTON');
+  closeModalBtn.textContent = 'X';
+  closeModalBtn.classList.add('btn-close');
+  closeModalBtn.onclick = closeModal;
+ 
+
+  modal.appendChild(img);
+  modal.appendChild(closeModalBtn);
+
+  const body = document.querySelector("body");
+  body.classList.add("overflow-hidden");
+  body.appendChild(modal);
+}
+
+function closeModal() {
+  const modal = document.querySelector(".modal");
+  modal.classList.add("fade-out");
+  setTimeout(() => {
+    modal?.remove();
+    const body = document.querySelector("body");
+    body.classList.remove("overflow-hidden");
+  }, 500);
 }
